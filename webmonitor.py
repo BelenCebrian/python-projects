@@ -98,8 +98,10 @@ def asus():
     # print(datos['Result'].keys()) #dict_keys(['Count', 'Obj'])
 
     firmware = datos['Result']['Obj'][0]['Files'][0]
+
     titulo = (datos['Result']['Obj'][0]['Files'][0]
               ['Title']).replace(" Firmware version", ":")
+
     version = datos['Result']['Obj'][0]['Files'][0]['Version']
     descripcion = datos['Result']['Obj'][0]['Files'][0]['Description']
     dia = datos['Result']['Obj'][0]['Files'][0]['ReleaseDate']
@@ -175,7 +177,7 @@ def comprobar_cambios(f1, f2):
         #print('HAY CAMBIOS!')
         telegram('HAY CAMBIOS!')
 
-        with open(f1, 'r') as f1, open(f2, 'r') as f2:
+        with open(f1, "r", encoding="utf-8") as f1, open(f2, "r") as f2:
             diff = difflib.ndiff(f2.readlines(), f1.readlines())
             for line in diff:
                 if line.startswith('+'):
@@ -211,27 +213,31 @@ def gimp():
     url = "https://www.gimp.org/news/"
     soup = req(url)
     version = soup.select_one(
-        "a[href*=released]").text.replace("GIMP", "GIMP:")
+        "a[href*=released]").text.replace("GIMP", "GIMP:").rstrip()
     return version.replace("Released", " ")
 
 
 def github(proyect):
     url = "https://github.com/" + proyect + "/releases/latest"
-    #print(url)
+    # print(url)
     soup = req(url)
     salida = " "
-    
+
     try:
 
-        version = soup.find(class_="f1 flex-auto min-width-0 text-normal").text.lstrip().rstrip()
-        tags = (soup.find(class_="css-truncate-target",  attrs={'style':"max-width: 125px"}).text).lstrip()
+        version = soup.find(
+            class_="f1 flex-auto min-width-0 text-normal").text.lstrip().rstrip()
+        tags = (soup.find(class_="css-truncate-target",
+                          attrs={'style': "max-width: 125px"}).text).lstrip()
         time = soup.find("relative-time", class_="no-wrap").text
         body = soup.find("div", class_="markdown-body").text[:250] + "..."
 
-        links = soup.find_all("div", class_="d-flex flex-justify-between flex-items-center py-1 py-md-2 Box-body px-2")
+        links = soup.find_all(
+            "div", class_="d-flex flex-justify-between flex-items-center py-1 py-md-2 Box-body px-2")
 
-        salida = '\n\n [X] {0} {1} [{2}]: {3} \n {4} \n \t{5}'.format( proyect, tags, time, version, url, textwrap.indent(body, '  \t-'))
-    
+        salida = '\n\n[X] {0} {1} [{2}]: {3} \n {4} \n \t{5}'.format(
+            proyect, tags, time, version, url, textwrap.indent(body, '  \t-'))
+
         #salida = "===",links,"==="
 
         for asset in links:
@@ -257,16 +263,9 @@ def github(proyect):
 def inkscape():
     url = "https://inkscape.org/release/"
     soup = req(url)
-#    texto = soup.find_all(class_="foot")
-#    for span in texto:
-#        resul = span.get_text().split(":")
-#    return "Inkscape:"+resul[1]+" ("+resul[0]+")"
-    texto = soup.find("div", class_="notes")
-    version = texto.h2
-    #fecha = texto.find_next("p").text
-    dia = version.find_next("p").text.strip(' Released on ')
-    #fecha = datetime.datetime.strptime(dia, "%m %d, %Y")
-    return version.text+": "+dia
+    texto = soup.find("div", id="sidecategory")
+    version = texto.h1
+    return version.text
 
 
 def kodi():
@@ -297,11 +296,7 @@ def pythonv():
 
 
 def req(url):
-    h1 = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0'}
-    h2 = {
-        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20100101 Firefox/10.0'}
-    html_content = requests.get(url, headers=h1).text
+    html_content = requests.get(url, headers=H1).text
     #r = requests.get(url)
     #html_content = r.text
     return bs(html_content, 'lxml')
@@ -358,9 +353,8 @@ def restar(data):
 
 
 def telegram(mensaje):
-    URL = "https://api.telegram.org/bot$TOKEN/sendMessage"
-    UR = "https://api.telegram.org/bot{}/sendMessage"
 
+    UR = "https://api.telegram.org/bot{}/sendMessage"
     URLL = UR.format(TOKEN1)
 
     if os.path.isfile(mensaje):
@@ -399,78 +393,83 @@ def titulo(url):
 
 
 def vlc():
+    # NO TERMINADO
     url_windows = "http://get.videolan.org/vlc/last/win64/"
     url_android = "http://get.videolan.org/vlc-android/"
     soup_windows = req(url_windows)
     soup_android = req(url_android)
+
     version = soup_windows.find_all('h2')[0].string
+    print(version)
+
+    texto = version
     return texto
 
 
 def bajar_fichero():
-    #fich = open('apps_ver_anterior.txt', 'w', encoding='utf-8')
-    # fich.write(calibre())
-    print('Comprobando en línea...')
 
-    with open(F1, 'w') as f:
+    print("Comprobando en línea...\n")
 
-        print(android(), file=f)
+    with open(F1, "w", encoding="utf-8") as f:
+
+        print("[X]", android(), file=f)
+
         print(" ", file=f)
-        print(asus(), file=f)
+        print("[X]",asus(), file=f)
+
         print(" ", file=f)
-        print(calibre(), file=f)
-        print(gimp(), file=f)
-        print(inkscape(), file=f)
+        print("[X]", calibre(), file=f)
+        print("[X]", gimp(), file=f)
+        print("[X]", inkscape(), file=f)
+
         nuevo, viejo = libreoffice()
-        print("\nLibreOffice:", file=f)
+        print("\n[X] LibreOffice:", file=f)
         print("\tLibreOffice Fresh (Reciente): ", nuevo, file=f)
         print("\tLibreOffice Still (Estable):  ", viejo, file=f)
-        print(" ", file=f)
-        print(raspbian(), file=f)
-
-        retropie = titulo(
-            "https://github.com/RetroPie/RetroPie-Setup/releases/latest")
-        retro = retropie.replace(" RetroPie-Setup Script ", "")
-        print("\n"+retro+"\n", file=f)
-
-        print("Github:", file=f)
-        print("\t"+titulo("https://github.com/sumatrapdfreader/sumatrapdf/releases/latest"), file=f)
-        print("\t"+titulo("https://github.com/pirate/ArchiveBox/releases/latest"), file=f)
-        print("\t"+titulo("https://github.com/FreshRSS/FreshRSS/releases/latest"), file=f)
-        print("\t"+titulo("https://github.com/pi-hole/pi-hole/releases/latest"), file=f)
-        print(" ", file=f)
-
-        print("\t"+titulo("https://github.com/buggins/coolreader/releases/latest"), file=f)
-        print("\t"+titulo("https://github.com/apprenticeharper/DeDRM_tools/releases/latest"), file=f)
-        print("\t"+titulo("https://github.com/koreader/koreader/releases/latest"), file=f)
-        print("\t"+titulo("https://github.com/seblucas/cops/releases/latest"), file=f)
-        print(
-            "\t"+titulo("https://github.com/janeczku/calibre-web/releases/latest"), file=f)
 
         print(" ", file=f)
-        print("\t"+titulo("https://github.com/microsoft/terminal/releases/latest"), file=f)
-        print("\t"+titulo("https://github.com/microsoft/PowerToys/releases/latest"), file=f)
+        print("[X]", raspbian(), file=f)
+
+        retropie = github("RetroPie/RetroPie-Setup")
+        retro = retropie.replace(" RetroPie-Setup Script ", " ").rstrip()
+        print("[X]", retro, file=f)
+
+        print(github("sumatrapdfreader/sumatrapdf"), file=f)
+        print(github("pirate/ArchiveBox"), file=f)
+        print(github("FreshRSS/FreshRSS"), file=f)
+        print(github("pi-hole/pi-hole"), file=f)
 
         print(" ", file=f)
-        print("\t"+titulo("https://github.com/atom/atom/releases/latest"), file=f)
-        print("\t"+titulo("https://github.com/microsoft/vscode/releases/latest"), file=f)
-        print(
-            "\t"+titulo("https://github.com/headmelted/codebuilds/releases/latest"), file=f)
+        print(github("buggins/coolreader"), file=f)
+        print(github("apprenticeharper/DeDRM_tools"), file=f)
+        print(github("koreader/koreader"), file=f)
+        print(github("seblucas/cops"), file=f)
+        print(github("janeczku/calibre-web"), file=f)
 
         print(" ", file=f)
-        print("\t"+titulo("https://github.com/ytdl-org/youtube-dl/releases/latest"), file=f)
-        print("\t"+titulo("https://github.com/TeamNewPipe/NewPipe/releases/latest"), file=f)
-        print("\t"+titulo("https://github.com/jellyfin/jellyfin/releases/latest"), file=f)
+        print(github("microsoft/terminal"), file=f)
+        print(github("microsoft/PowerToys"), file=f)
+
+        print(" ", file=f)
+        print(github("atom/atom"), file=f)
+        print(github("microsoft/vscode"), file=f)
+        print(github("headmelted/codebuilds"), file=f)
+
+        print(" ", file=f)
+        print(github("ytdl-org/youtube-dl"), file=f)
+        print(github("TeamNewPipe/NewPipe"), file=f)
+        print(github("jellyfin/jellyfin"), file=f)
+
+        f.close()
 
 
 if __name__ == "__main__":
 
     # bajar_fichero()
-    # raspbian()
 
-    print(github("microsoft/vscode"))
-    print(github("janeczku/calibre-web/"))
+    # print(github("microsoft/vscode"))
+    # print(github("janeczku/calibre-web/"))
 
-    #comprobar_ficheros(F1, F2)
+    comprobar_ficheros(F1, F2)
     # print(inkscape())
     # telegram(F1)

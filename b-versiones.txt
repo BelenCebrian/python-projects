@@ -1,28 +1,48 @@
-HolaAndroid-x86: cm-x86-14.1-r4 released (fourth stable release of cm-14.1-x86) [20 May. 2020]
+[X] Android-x86: cm-x86-14.1-r4 released (fourth stable release of cm-14.1-x86) [20 May. 2020]
  
-ASUS RT-AC68U: 3.0.0.4.385.20633
+[X] ASUS RT-AC68U: 3.0.0.4.385.20633
 	[14 Aug. 2020]    36.78 MBytes
 	https://dlcdnets.asus.com/pub/ASUS/wireless/RT-AC68U/FW_RT_AC68U_300438520633.zip
  
-Calibre: 4.23 [21 Aug. 2020]
-
+[X] Calibre: 4.23 [21 Aug. 2020]
+[X] 
 GIMP: 2.10.20  
-                            
-Inkscape 1.0.1
+[X] Inkscape 1.0.1
 
-LibreOffice:
+[X] LibreOffice:
 	LibreOffice Fresh (Reciente):  7.0.1
 	LibreOffice Still (Estable):   6.4.6
  
-Raspbian:
+[X] Raspbian:
 	Raspberry Pi OS (32-bit) (desktop + software)
 	[20 Aug. 2020]     2531 MB    5.4 kernel
 	https://downloads.raspberrypi.org/raspios_full_armhf_latest
-Github:
-sumatrapdfreader/sumatrapdf 
+[X] 
+
+[X] RetroPie/RetroPie-Setup 4.6 [Apr 28, 2020]: version 4.6 
+ https://github.com/RetroPie/RetroPie-Setup/releases/latest 
+ 	
+  	-Changes since 4.5
+
+  	-Raspberry Pi 4 support! Support is labelled as beta currently as there are still things to improve, but most emulators now run well.
+  	-The RetroPie images are now based on Raspbian Buster - Stretch is no longer supported by Raspberr...
+
+	 * retropie-buster-4.6-rpi1_zero.img.gz (797 MB): github.com/RetroPie/RetroPie-Setup/releases/download/4.6/retropie-buster-4.6-rpi1_zero.img.gz
+
+	 * retropie-buster-4.6-rpi2_rpi3.img.gz (803 MB): github.com/RetroPie/RetroPie-Setup/releases/download/4.6/retropie-buster-4.6-rpi2_rpi3.img.gz
+
+	 * retropie-buster-4.6-rpi4.img.gz (807 MB): github.com/RetroPie/RetroPie-Setup/releases/download/4.6/retropie-buster-4.6-rpi4.img.gz
 
 
- [X] FreshRSS/FreshRSS 1.17.0 [Sep 22, 2020]: FreshRSS 1.17.0 
+[X] sumatrapdfreader/sumatrapdf 3.2 [Mar 17, 2020]: 3.2 release 
+ https://github.com/sumatrapdfreader/sumatrapdf/releases/latest 
+ 	
+  	-Changes in this release: https://www.sumatrapdfreader.org/docs/Version-3.2.html
+  	-...
+ 
+
+
+[X] FreshRSS/FreshRSS 1.17.0 [Sep 22, 2020]: FreshRSS 1.17.0 
  https://github.com/FreshRSS/FreshRSS/releases/latest 
  	
 
@@ -43,7 +63,7 @@ sumatrapdfreader/sumatrapdf
   	-Add user auto-registration when using HTTP Basic authentication login method #3...
 
 
- [X] pi-hole/pi-hole v5.1.2 [Aug 9, 2020]: Pi-hole Core v5.1.2 
+[X] pi-hole/pi-hole v5.1.2 [Aug 9, 2020]: Pi-hole Core v5.1.2 
  https://github.com/pi-hole/pi-hole/releases/latest 
  	
 
@@ -54,7 +74,7 @@ sumatrapdfreader/sumatrapdf
  
 
 
- [X] buggins/coolreader cr3.2.49 [Sep 11, 2020]: cr3.2.49 
+[X] buggins/coolreader cr3.2.49 [Sep 11, 2020]: cr3.2.49 
  https://github.com/buggins/coolreader/releases/latest 
  	
   	-Fixes for 3.2.47
@@ -72,7 +92,7 @@ sumatrapdfreader/sumatrapdf
 	 * cr3.2.49-x86_64-release.apk (9.31 MB): github.com/buggins/coolreader/releases/download/cr3.2.49/cr3.2.49-x86_64-release.apk
 
 
- [X] apprenticeharper/DeDRM_tools v6.8.0 [Jun 18, 2020]: v6.8.0 
+[X] apprenticeharper/DeDRM_tools v6.8.0 [Jun 18, 2020]: v6.8.0 
  https://github.com/apprenticeharper/DeDRM_tools/releases/latest 
  	
   	-This release adds full support for the new .kinf2018 key files and the nw KFX encryption. Many thanks to Apprentice Sakuya for their work on this.
@@ -81,7 +101,7 @@ sumatrapdfreader/sumatrapdf
 	 * DeDRM_tools_6.8.0.zip (470 KB): github.com/apprenticeharper/DeDRM_tools/releases/download/v6.8.0/DeDRM_tools_6.8.0.zip
 
 
- [X] koreader/koreader v2020.09 [Sep 17, 2020]: KOReader 2020.09 "Peanut Butter" 
+[X] koreader/koreader v2020.09 [Sep 17, 2020]: KOReader 2020.09 "Peanut Butter" 
  https://github.com/koreader/koreader/releases/latest 
  	
   	-This month's release addresses a few long-standing PocketBook platform issues to bring the experience more in line with other platforms. A big thanks to @ezdiy for the effort.
@@ -116,7 +136,7 @@ sumatrapdfreader/sumatrapdf
 	 * koreader-sony-prstux-v2020.09.zip (36.8 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-sony-prstux-v2020.09.zip
 
 
- [X] seblucas/cops 1.1.3 [Jun 24, 2019]: 1.1.3 - 20190624 
+[X] seblucas/cops 1.1.3 [Jun 24, 2019]: 1.1.3 - 20190624 
  https://github.com/seblucas/cops/releases/latest 
  	
 
@@ -127,7 +147,7 @@ sumatrapdfreader/sumatrapdf
 	 * cops-1.1.3.zip (2.08 MB): github.com/seblucas/cops/releases/download/1.1.3/cops-1.1.3.zip
 
 
- [X] janeczku/calibre-web 0.6.8 [Jun 3, 2020]: V0.6.8 - Honor 
+[X] janeczku/calibre-web 0.6.8 [Jun 3, 2020]: V0.6.8 - Honor 
  https://github.com/janeczku/calibre-web/releases/latest 
  	
   	-New features:
@@ -141,7 +161,7 @@ sumatrapdfreader/sumatrapdf
  
 
 
- [X] microsoft/terminal v1.3.2651.0 [Sep 22, 2020]: Windows Terminal v1.3.2651.0 
+[X] microsoft/terminal v1.3.2651.0 [Sep 22, 2020]: Windows Terminal v1.3.2651.0 
  https://github.com/microsoft/terminal/releases/latest 
  	
   	-This release brings all of the preview changes in Windows Terminal 1.3 to the stable channel. Notable changes include:
@@ -154,7 +174,7 @@ sumatrapdfreader/sumatrapdf
 	 * Microsoft.WindowsTerminal_1.3.2651.0_8wekyb3d8bbwe.msixbundle_Windows10_PreinstallKit.zip (20.7 MB): github.com/microsoft/terminal/releases/download/v1.3.2651.0/Microsoft.WindowsTerminal_1.3.2651.0_8wekyb3d8bbwe.msixbundle_Windows10_PreinstallKit.zip
 
 
- [X] microsoft/PowerToys v0.21.1 [Sep 2, 2020]: Release v0.21.1 
+[X] microsoft/PowerToys v0.21.1 [Sep 2, 2020]: Release v0.21.1 
  https://github.com/microsoft/PowerToys/releases/latest 
  	
   	-Our goals for 0.21 release cycle was to focus on stability, localization and quality of life improvements for both the development team and our end users.
@@ -169,7 +189,7 @@ sumatrapdfreader/sumatrapdf
  
 
 
- [X] atom/atom v1.51.0 [Sep 9, 2020]: 1.51.0 
+[X] atom/atom v1.51.0 [Sep 9, 2020]: 1.51.0 
  https://github.com/atom/atom/releases/latest 
  	
   	-Notable Changes
@@ -218,7 +238,7 @@ sumatrapdfreader/sumatrapdf
 	 * RELEASES-x64 (10.9 KB): github.com/atom/atom/releases/download/v1.51.0/RELEASES-x64
 
 
- [X] microsoft/vscode 1.49.1 [Sep 17, 2020]: August 2020 Recovery 
+[X] microsoft/vscode 1.49.1 [Sep 17, 2020]: August 2020 Recovery 
  https://github.com/microsoft/vscode/releases/latest 
  	
   	-The update addresses these issues.
@@ -226,7 +246,7 @@ sumatrapdfreader/sumatrapdf
   	-...
 
 
- [X] headmelted/codebuilds 06-Apr-20 [Apr 6, 2020]: 06-Apr-20 
+[X] headmelted/codebuilds 06-Apr-20 [Apr 6, 2020]: 06-Apr-20 
  https://github.com/headmelted/codebuilds/releases/latest 
  	
   	-Build as of 06-Apr-20
@@ -238,7 +258,7 @@ sumatrapdfreader/sumatrapdf
  
 
 
- [X] ytdl-org/youtube-dl 2020.09.20 [Sep 20, 2020]: youtube-dl 2020.09.20 
+[X] ytdl-org/youtube-dl 2020.09.20 [Sep 20, 2020]: youtube-dl 2020.09.20 
  https://github.com/ytdl-org/youtube-dl/releases/latest 
  	
   	-Core
@@ -273,7 +293,7 @@ sumatrapdfreader/sumatrapdf
 	 * youtube-dl.sig (566 Bytes): github.com/ytdl-org/youtube-dl/releases/download/2020.09.20/youtube-dl.sig
 
 
- [X] TeamNewPipe/NewPipe v0.19.8 [Jul 28, 2020]: v0.19.8 
+[X] TeamNewPipe/NewPipe v0.19.8 [Jul 28, 2020]: v0.19.8 
  https://github.com/TeamNewPipe/NewPipe/releases/latest 
  	
   	-➡️  Blog post for this release
@@ -286,7 +306,7 @@ sumatrapdfreader/sumatrapdf
 	 * NewPipe_v0.19.8.apk (7.25 MB): github.com/TeamNewPipe/NewPipe/releases/download/v0.19.8/NewPipe_v0.19.8.apk
 
 
- [X] jellyfin/jellyfin v10.6.4 [Aug 30, 2020]: Release 10.6.4 
+[X] jellyfin/jellyfin v10.6.4 [Aug 30, 2020]: Release 10.6.4 
  https://github.com/jellyfin/jellyfin/releases/latest 
  	
   	-Jellyfin 10.6.4
