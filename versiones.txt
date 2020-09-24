@@ -5,8 +5,9 @@
 	https://dlcdnets.asus.com/pub/ASUS/wireless/RT-AC68U/FW_RT_AC68U_300438520633.zip
  
 [X] Calibre: 4.23 [21 Aug. 2020]
-[X] 
-GIMP: 2.10.20  
+
+[X] GIMP: 2.10.20  
+
 [X] Inkscape 1.0.1
 
 [X] LibreOffice:
@@ -19,7 +20,7 @@ GIMP: 2.10.20 
 	https://downloads.raspberrypi.org/raspios_full_armhf_latest
 [X] 
 
-[X] RetroPie/RetroPie-Setup 4.6 [Apr 28, 2020]: version 4.6 
+[X] RetroPie/RetroPie-Setup 4.6 [28 Apr. 2020] version 4.6 
  https://github.com/RetroPie/RetroPie-Setup/releases/latest 
  	
   	-Changes since 4.5
@@ -27,14 +28,12 @@ GIMP: 2.10.20 
   	-Raspberry Pi 4 support! Support is labelled as beta currently as there are still things to improve, but most emulators now run well.
   	-The RetroPie images are now based on Raspbian Buster - Stretch is no longer supported by Raspberr...
 
-	 * retropie-buster-4.6-rpi1_zero.img.gz (797 MB): github.com/RetroPie/RetroPie-Setup/releases/download/4.6/retropie-buster-4.6-rpi1_zero.img.gz
-
 	 * retropie-buster-4.6-rpi2_rpi3.img.gz (803 MB): github.com/RetroPie/RetroPie-Setup/releases/download/4.6/retropie-buster-4.6-rpi2_rpi3.img.gz
 
 	 * retropie-buster-4.6-rpi4.img.gz (807 MB): github.com/RetroPie/RetroPie-Setup/releases/download/4.6/retropie-buster-4.6-rpi4.img.gz
 
 
-[X] sumatrapdfreader/sumatrapdf 3.2 [Mar 17, 2020]: 3.2 release 
+[X] sumatrapdfreader/sumatrapdf 3.2 [17 Mar. 2020] 3.2 release 
  https://github.com/sumatrapdfreader/sumatrapdf/releases/latest 
  	
   	-Changes in this release: https://www.sumatrapdfreader.org/docs/Version-3.2.html
@@ -42,7 +41,7 @@ GIMP: 2.10.20 
  
 
 
-[X] FreshRSS/FreshRSS 1.17.0 [Sep 22, 2020]: FreshRSS 1.17.0 
+[X] FreshRSS/FreshRSS 1.17.0 [22 Sep. 2020] FreshRSS 1.17.0 
  https://github.com/FreshRSS/FreshRSS/releases/latest 
  	
 
@@ -63,7 +62,7 @@ GIMP: 2.10.20 
   	-Add user auto-registration when using HTTP Basic authentication login method #3...
 
 
-[X] pi-hole/pi-hole v5.1.2 [Aug 9, 2020]: Pi-hole Core v5.1.2 
+[X] pi-hole/pi-hole v5.1.2 [09 Aug. 2020] Pi-hole Core v5.1.2 
  https://github.com/pi-hole/pi-hole/releases/latest 
  	
 
@@ -74,34 +73,26 @@ GIMP: 2.10.20 
  
 
 
-[X] buggins/coolreader cr3.2.49 [Sep 11, 2020]: cr3.2.49 
+[X] buggins/coolreader cr3.2.49 [11 Sep. 2020] cr3.2.49 
  https://github.com/buggins/coolreader/releases/latest 
  	
   	-Fixes for 3.2.47
   	-ODS support
   	-...
 
-	 * cr3.2.49-arm64-v8a-release.apk (9.12 MB): github.com/buggins/coolreader/releases/download/cr3.2.49/cr3.2.49-arm64-v8a-release.apk
-
 	 * cr3.2.49-armeabi-v7a-release.apk (8.98 MB): github.com/buggins/coolreader/releases/download/cr3.2.49/cr3.2.49-armeabi-v7a-release.apk
 
 	 * cr3.2.49-universal-release.apk (23.6 MB): github.com/buggins/coolreader/releases/download/cr3.2.49/cr3.2.49-universal-release.apk
 
-	 * cr3.2.49-x86-release.apk (9.25 MB): github.com/buggins/coolreader/releases/download/cr3.2.49/cr3.2.49-x86-release.apk
 
-	 * cr3.2.49-x86_64-release.apk (9.31 MB): github.com/buggins/coolreader/releases/download/cr3.2.49/cr3.2.49-x86_64-release.apk
-
-
-[X] apprenticeharper/DeDRM_tools v6.8.0 [Jun 18, 2020]: v6.8.0 
+[X] apprenticeharper/DeDRM_tools v6.8.0 [18 Jun. 2020] v6.8.0 
  https://github.com/apprenticeharper/DeDRM_tools/releases/latest 
  	
   	-This release adds full support for the new .kinf2018 key files and the nw KFX encryption. Many thanks to Apprentice Sakuya for their work on this.
   	-This means that this release now works with the latest (2.8) version of Kindle for PC and Kindle for M...
 
-	 * DeDRM_tools_6.8.0.zip (470 KB): github.com/apprenticeharper/DeDRM_tools/releases/download/v6.8.0/DeDRM_tools_6.8.0.zip
 
-
-[X] koreader/koreader v2020.09 [Sep 17, 2020]: KOReader 2020.09 "Peanut Butter" 
+[X] koreader/koreader v2020.09 [17 Sep. 2020] KOReader 2020.09 "Peanut Butter" 
  https://github.com/koreader/koreader/releases/latest 
  	
   	-This month's release addresses a few long-standing PocketBook platform issues to bring the experience more in line with other platforms. A big thanks to @ezdiy for the effort.
@@ -109,34 +100,16 @@ GIMP: 2.10.20 
 
 	 * koreader-2020.09-amd64.deb (25.3 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-2020.09-amd64.deb
 
-	 * koreader-2020.09-armel.deb (23.6 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-2020.09-armel.deb
-
 	 * koreader-2020.09-armhf.deb (23.6 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-2020.09-armhf.deb
 
 	 * koreader-android-arm-v2020.09.apk (35.3 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-android-arm-v2020.09.apk
 
 	 * koreader-android-x86-v2020.09.apk (37.7 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-android-x86-v2020.09.apk
 
-	 * koreader-appimage-x86_64-linux-gnu-v2020.09.AppImage (38.4 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-appimage-x86_64-linux-gnu-v2020.09.AppImage
-
-	 * koreader-cervantes-v2020.09.zip (36.5 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-cervantes-v2020.09.zip
-
-	 * koreader-kindle-legacy-v2020.09.zip (37 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-kindle-legacy-v2020.09.zip
-
-	 * koreader-kindle-v2020.09.zip (36.5 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-kindle-v2020.09.zip
-
-	 * koreader-kindlepw2-v2020.09.zip (36.7 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-kindlepw2-v2020.09.zip
-
 	 * koreader-kobo-v2020.09.zip (37.8 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-kobo-v2020.09.zip
 
-	 * koreader-pocketbook-v2020.09.zip (36.6 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-pocketbook-v2020.09.zip
 
-	 * koreader-remarkable-v2020.09.zip (36.9 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-remarkable-v2020.09.zip
-
-	 * koreader-sony-prstux-v2020.09.zip (36.8 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-sony-prstux-v2020.09.zip
-
-
-[X] seblucas/cops 1.1.3 [Jun 24, 2019]: 1.1.3 - 20190624 
+[X] seblucas/cops 1.1.3 [24 Jun. 2019] 1.1.3 - 20190624 
  https://github.com/seblucas/cops/releases/latest 
  	
 
@@ -144,10 +117,8 @@ GIMP: 2.10.20 
   	-Fixed the view button when URL Rewriting is enabled.
   	-Fixed an error in epubreader with headers. thanks t...
 
-	 * cops-1.1.3.zip (2.08 MB): github.com/seblucas/cops/releases/download/1.1.3/cops-1.1.3.zip
 
-
-[X] janeczku/calibre-web 0.6.8 [Jun 3, 2020]: V0.6.8 - Honor 
+[X] janeczku/calibre-web 0.6.8 [03 Jun. 2020] V0.6.8 - Honor 
  https://github.com/janeczku/calibre-web/releases/latest 
  	
   	-New features:
@@ -156,12 +127,10 @@ GIMP: 2.10.20 
   	-Updated comic api (using now also unrar instead of unrarlib) -> needs manual update via pip
   	-Updated comic api now also extracts metadata from cbt files
   	-.png and webp pictures are extracted as cover pictur...
-
-	 * calibre-web-0.6.8.zip (4.02 MB): github.com/janeczku/calibre-web/releases/download/0.6.8/calibre-web-0.6.8.zip
  
 
 
-[X] microsoft/terminal v1.3.2651.0 [Sep 22, 2020]: Windows Terminal v1.3.2651.0 
+[X] microsoft/terminal v1.3.2651.0 [22 Sep. 2020] Windows Terminal v1.3.2651.0 
  https://github.com/microsoft/terminal/releases/latest 
  	
   	-This release brings all of the preview changes in Windows Terminal 1.3 to the stable channel. Notable changes include:
@@ -169,12 +138,8 @@ GIMP: 2.10.20 
   	-A new tab switching experience, on by default. Opt out with "useTabSwitcher": false.
   	-The command palette is now bound to Ctrl+Shi...
 
-	 * Microsoft.WindowsTerminal_1.3.2651.0_8wekyb3d8bbwe.msixbundle (21.2 MB): github.com/microsoft/terminal/releases/download/v1.3.2651.0/Microsoft.WindowsTerminal_1.3.2651.0_8wekyb3d8bbwe.msixbundle
 
-	 * Microsoft.WindowsTerminal_1.3.2651.0_8wekyb3d8bbwe.msixbundle_Windows10_PreinstallKit.zip (20.7 MB): github.com/microsoft/terminal/releases/download/v1.3.2651.0/Microsoft.WindowsTerminal_1.3.2651.0_8wekyb3d8bbwe.msixbundle_Windows10_PreinstallKit.zip
-
-
-[X] microsoft/PowerToys v0.21.1 [Sep 2, 2020]: Release v0.21.1 
+[X] microsoft/PowerToys v0.21.1 [02 Sep. 2020] Release v0.21.1 
  https://github.com/microsoft/PowerToys/releases/latest 
  	
   	-Our goals for 0.21 release cycle was to focus on stability, localization and quality of life improvements for both the development team and our end users.
@@ -182,14 +147,10 @@ GIMP: 2.10.20 
   	-Please use the pre-release 0.22 installer if you want t...
 
 	 * PowerToysSetup-0.21.1-x64.exe (20.6 MB): github.com/microsoft/PowerToys/releases/download/v0.21.1/PowerToysSetup-0.21.1-x64.exe
-
-	 * PowerToysSetup-0.21.1-x64.msi (19.9 MB): github.com/microsoft/PowerToys/releases/download/v0.21.1/PowerToysSetup-0.21.1-x64.msi
-
-	 * Symbols.zip (101 MB): github.com/microsoft/PowerToys/releases/download/v0.21.1/Symbols.zip
  
 
 
-[X] atom/atom v1.51.0 [Sep 9, 2020]: 1.51.0 
+[X] atom/atom v1.51.0 [09 Sep. 2020] 1.51.0 
  https://github.com/atom/atom/releases/latest 
  	
   	-Notable Changes
@@ -205,40 +166,20 @@ GIMP: 2.10.20 
   	-atom/atom#21061 - no PR triggers on release builds
   	-atom/atom#20856 - Miscellaneous python3-related u...
 
-	 * atom-1.51.0-delta.nupkg (63.9 MB): github.com/atom/atom/releases/download/v1.51.0/atom-1.51.0-delta.nupkg
-
-	 * atom-1.51.0-full.nupkg (169 MB): github.com/atom/atom/releases/download/v1.51.0/atom-1.51.0-full.nupkg
-
 	 * atom-amd64.deb (120 MB): github.com/atom/atom/releases/download/v1.51.0/atom-amd64.deb
 
 	 * atom-amd64.tar.gz (176 MB): github.com/atom/atom/releases/download/v1.51.0/atom-amd64.tar.gz
 
-	 * atom-api.json (1.03 MB): github.com/atom/atom/releases/download/v1.51.0/atom-api.json
-
-	 * atom-mac-symbols.zip (190 KB): github.com/atom/atom/releases/download/v1.51.0/atom-mac-symbols.zip
-
-	 * atom-mac.zip (183 MB): github.com/atom/atom/releases/download/v1.51.0/atom-mac.zip
-
 	 * atom-windows.zip (170 MB): github.com/atom/atom/releases/download/v1.51.0/atom-windows.zip
 
-	 * atom-x64-1.51.0-delta.nupkg (63.9 MB): github.com/atom/atom/releases/download/v1.51.0/atom-x64-1.51.0-delta.nupkg
-
-	 * atom-x64-1.51.0-full.nupkg (175 MB): github.com/atom/atom/releases/download/v1.51.0/atom-x64-1.51.0-full.nupkg
-
 	 * atom-x64-windows.zip (175 MB): github.com/atom/atom/releases/download/v1.51.0/atom-x64-windows.zip
-
-	 * atom.x86_64.rpm (176 MB): github.com/atom/atom/releases/download/v1.51.0/atom.x86_64.rpm
 
 	 * AtomSetup-x64.exe (172 MB): github.com/atom/atom/releases/download/v1.51.0/AtomSetup-x64.exe
 
 	 * AtomSetup.exe (167 MB): github.com/atom/atom/releases/download/v1.51.0/AtomSetup.exe
 
-	 * RELEASES (26.6 KB): github.com/atom/atom/releases/download/v1.51.0/RELEASES
 
-	 * RELEASES-x64 (10.9 KB): github.com/atom/atom/releases/download/v1.51.0/RELEASES-x64
-
-
-[X] microsoft/vscode 1.49.1 [Sep 17, 2020]: August 2020 Recovery 
+[X] microsoft/vscode 1.49.1 [17 Sep. 2020] August 2020 Recovery 
  https://github.com/microsoft/vscode/releases/latest 
  	
   	-The update addresses these issues.
@@ -246,19 +187,17 @@ GIMP: 2.10.20 
   	-...
 
 
-[X] headmelted/codebuilds 06-Apr-20 [Apr 6, 2020]: 06-Apr-20 
+[X] headmelted/codebuilds 06-Apr-20 [06 Apr. 2020] 06-Apr-20 
  https://github.com/headmelted/codebuilds/releases/latest 
  	
   	-Build as of 06-Apr-20
   	-...
 
 	 * code-oss_1.45.0-1586135927_armhf.deb (57.9 MB): github.com/headmelted/codebuilds/releases/download/06-Apr-20/code-oss_1.45.0-1586135927_armhf.deb
-
-	 * code-oss_1.45.0-1586135971_arm64.deb (58.7 MB): github.com/headmelted/codebuilds/releases/download/06-Apr-20/code-oss_1.45.0-1586135971_arm64.deb
  
 
 
-[X] ytdl-org/youtube-dl 2020.09.20 [Sep 20, 2020]: youtube-dl 2020.09.20 
+[X] ytdl-org/youtube-dl 2020.09.20 [20 Sep. 2020] youtube-dl 2020.09.20 
  https://github.com/ytdl-org/youtube-dl/releases/latest 
  	
   	-Core
@@ -272,28 +211,12 @@ GIMP: 2.10.20 
   	-[downloader/hls] Fix incorrect end byte in Range HTTP header for
   	-media segments with EXT-X-BYTERANG...
 
-	 * MD5SUMS (157 Bytes): github.com/ytdl-org/youtube-dl/releases/download/2020.09.20/MD5SUMS
-
-	 * SHA1SUMS (181 Bytes): github.com/ytdl-org/youtube-dl/releases/download/2020.09.20/SHA1SUMS
-
-	 * SHA2-256SUMS (253 Bytes): github.com/ytdl-org/youtube-dl/releases/download/2020.09.20/SHA2-256SUMS
-
-	 * SHA2-512SUMS (445 Bytes): github.com/ytdl-org/youtube-dl/releases/download/2020.09.20/SHA2-512SUMS
-
-	 * youtube-dl (1.68 MB): github.com/ytdl-org/youtube-dl/releases/download/2020.09.20/youtube-dl
-
-	 * youtube-dl-2020.09.20.tar.gz (3.04 MB): github.com/ytdl-org/youtube-dl/releases/download/2020.09.20/youtube-dl-2020.09.20.tar.gz
-
-	 * youtube-dl-2020.09.20.tar.gz.sig (566 Bytes): github.com/ytdl-org/youtube-dl/releases/download/2020.09.20/youtube-dl-2020.09.20.tar.gz.sig
-
 	 * youtube-dl.exe (7.69 MB): github.com/ytdl-org/youtube-dl/releases/download/2020.09.20/youtube-dl.exe
 
 	 * youtube-dl.exe.sig (566 Bytes): github.com/ytdl-org/youtube-dl/releases/download/2020.09.20/youtube-dl.exe.sig
 
-	 * youtube-dl.sig (566 Bytes): github.com/ytdl-org/youtube-dl/releases/download/2020.09.20/youtube-dl.sig
 
-
-[X] TeamNewPipe/NewPipe v0.19.8 [Jul 28, 2020]: v0.19.8 
+[X] TeamNewPipe/NewPipe v0.19.8 [28 Jul. 2020] v0.19.8 
  https://github.com/TeamNewPipe/NewPipe/releases/latest 
  	
   	-➡️  Blog post for this release
@@ -303,10 +226,8 @@ GIMP: 2.10.20 
 
   	-...
 
-	 * NewPipe_v0.19.8.apk (7.25 MB): github.com/TeamNewPipe/NewPipe/releases/download/v0.19.8/NewPipe_v0.19.8.apk
 
-
-[X] jellyfin/jellyfin v10.6.4 [Aug 30, 2020]: Release 10.6.4 
+[X] jellyfin/jellyfin v10.6.4 [30 Aug. 2020] Release 10.6.4 
  https://github.com/jellyfin/jellyfin/releases/latest 
  	
   	-Jellyfin 10.6.4

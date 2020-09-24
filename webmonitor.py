@@ -21,6 +21,7 @@ from io import open
 from bs4 import BeautifulSoup as bs
 import html2text
 import textwrap
+import locale
 
 # variables globales
 TOKEN1 = config.TOKEN1  # appActualizada
@@ -177,7 +178,7 @@ def comprobar_cambios(f1, f2):
         #print('HAY CAMBIOS!')
         telegram('HAY CAMBIOS!')
 
-        with open(f1, "r", encoding="utf-8") as f1, open(f2, "r") as f2:
+        with open(f1, 'r', encoding='utf-8') as f1, open(f2, 'r', encoding='utf-8') as f2:
             diff = difflib.ndiff(f2.readlines(), f1.readlines())
             for line in diff:
                 if line.startswith('+'):
@@ -185,10 +186,10 @@ def comprobar_cambios(f1, f2):
                     # print(cambio)
                     telegram(cambio)
 
-# NO USADO: para seguir redirecciones web (ASUS)
-
 
 def get_hops(url):
+    # NO USADO: para seguir redirecciones web (ASUS)
+
     redirect_re = re.compile('<meta[^>]*?url=(.*?)["\']', re.IGNORECASE)
     hops = []
     while url:
@@ -213,7 +214,7 @@ def gimp():
     url = "https://www.gimp.org/news/"
     soup = req(url)
     version = soup.select_one(
-        "a[href*=released]").text.replace("GIMP", "GIMP:").rstrip()
+        "a[href*=released]").text.replace("GIMP", "GIMP:").rstrip().lstrip()
     return version.replace("Released", " ")
 
 
@@ -227,16 +228,21 @@ def github(proyect):
 
         version = soup.find(
             class_="f1 flex-auto min-width-0 text-normal").text.lstrip().rstrip()
+
         tags = (soup.find(class_="css-truncate-target",
                           attrs={'style': "max-width: 125px"}).text).lstrip()
-        time = soup.find("relative-time", class_="no-wrap").text
+
+        dia = soup.find("relative-time", class_="no-wrap").text
+        fecha = datetime.datetime.strptime(
+            dia, "%b %d, %Y").strftime("%d %b. %Y")
+
         body = soup.find("div", class_="markdown-body").text[:250] + "..."
 
         links = soup.find_all(
             "div", class_="d-flex flex-justify-between flex-items-center py-1 py-md-2 Box-body px-2")
 
-        salida = '\n\n[X] {0} {1} [{2}]: {3} \n {4} \n \t{5}'.format(
-            proyect, tags, time, version, url, textwrap.indent(body, '  \t-'))
+        salida = '\n\n[X] {0} {1} [{2}] {3} \n {4} \n \t{5}'.format(
+            proyect, tags, fecha, version, url, textwrap.indent(body, '  \t-'))
 
         #salida = "===",links,"==="
 
@@ -244,15 +250,20 @@ def github(proyect):
             t = asset.find("a").text.lstrip().rstrip()
             size = asset.find("small").text.lstrip()
             download = asset.find("a")["href"]
-            salida += '\n\n\t * {0} ({1}): github.com{2}'.format(t, size, download)
 
-        """         if ("koreader" in url):
-                filter = ["armhf", "amd64", "android", "kobo"]
-                if any(x in t for x in filter):
-                    print('\n\t- {0} ({1}): github.com{2}'.format(t, size, download))
+            filter = ["rpi3", "rpi4", "armeabi-v7a", "universal-release",
+                      "armhf", "amd64", "android", "kobo", "exe", "windows"]
+
+            if any(x in t for x in filter):
+                #print("filtramos resultados...")
+                print('\n\n\t * {0} ({1}): github.com{2}'
+                      .format(t, size, download))
+
+                salida += '\n\n\t * {0} ({1}): github.com{2}'.format(t, size, download)
+
             else:
-            print('\n\t- {0} ({1}): github.com{2}'.format(t, size, download))
-        """
+                #print("Saltamos descarga")
+                # print('\n\n\t * {0} ({1}): github.com{2}''.format(t, size, download))
 
     except AttributeError:
         pass
@@ -353,16 +364,18 @@ def restar(data):
 
 
 def telegram(mensaje):
+    print("telegram(", mensaje, ")")
 
     UR = "https://api.telegram.org/bot{}/sendMessage"
     URLL = UR.format(TOKEN1)
 
     if os.path.isfile(mensaje):
+        print("\t es fichero!\n\n")
 
-        f = open(mensaje, 'r')
-        contenido = f.read()
-        # print(contenido)
-        r = requests.post(URLL, data={'chat_id': CHAT1, 'text': contenido})
+        with open(mensaje, 'r', encoding='utf-8') as f:
+            contenido = f.read()
+            #print("====== contenido:====== \n",contenido)
+            r = requests.post(URLL, data={'chat_id': CHAT1, 'text': contenido})
 
     else:
         r = requests.post(URLL, data={'chat_id': CHAT1, 'text': mensaje})
@@ -415,12 +428,12 @@ def bajar_fichero():
         print("[X]", android(), file=f)
 
         print(" ", file=f)
-        print("[X]",asus(), file=f)
+        print("[X]", asus(), file=f)
 
         print(" ", file=f)
         print("[X]", calibre(), file=f)
-        print("[X]", gimp(), file=f)
-        print("[X]", inkscape(), file=f)
+        print("\n[X]", gimp(), file=f)
+        print("\n[X]", inkscape(), file=f)
 
         nuevo, viejo = libreoffice()
         print("\n[X] LibreOffice:", file=f)
@@ -465,11 +478,9 @@ def bajar_fichero():
 
 if __name__ == "__main__":
 
-    # bajar_fichero()
+    bajar_fichero()
+    telegram(F1)
 
     # print(github("microsoft/vscode"))
-    # print(github("janeczku/calibre-web/"))
-
-    comprobar_ficheros(F1, F2)
+    #comprobar_ficheros(F1, F2)
     # print(inkscape())
-    # telegram(F1)
