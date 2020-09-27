@@ -381,7 +381,7 @@ def telegram(mensaje):
                 r = requests.post(URLL, data = {'chat_id': CHAT1, 'text': item, 'disable_web_page_preview': True})
 
     else:
-        r = requests.post(URLL, data = {'chat_id': CHAT1, 'text': mensaje})
+        r = requests.post(URLL, data = {'chat_id': CHAT1, 'text': mensaje, 'disable_web_page_preview': True})
 
         # Forma 2: curl y pasando argumento a argumento
         # entrad = "curl -s -X POST {} -d chat_id={} -d text='{}'".format(URLL, ID, mensaje)
