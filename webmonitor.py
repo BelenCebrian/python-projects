@@ -171,7 +171,10 @@ def comprobar_cambios(f1, f2):
         telegram('HAY CAMBIOS!')
 
         with open(f1, 'r', encoding='utf-8') as f1, open(f2, 'r', encoding='utf-8') as f2:
-            diff = difflib.ndiff(f2.readlines(), f1.readlines())
+            data_f1 = f1.read().split(sep="[X]")
+            data_f2 = f2.read().split(sep="[X]")
+            diff = difflib.ndiff(data_f2, data_f1)
+
             for line in diff:
                 if line.startswith('+'):
                     cambio = line.strip('+')
@@ -392,7 +395,7 @@ def telegram(mensaje):
     # print(data['ok'])
     # print(r.content)
     # print(r.text)
-    print("fin telegram")
+    # print("fin telegram")
 
 
 def titul(url):
@@ -486,5 +489,5 @@ if __name__ == "__main__":
     #telegram(F1)
 
     # print(github("microsoft/vscode"))
-    comprobar_ficheros(F1, F2)
+    comprobar_cambios(F1, F2)
     # telegram(F1)
