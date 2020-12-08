@@ -54,8 +54,7 @@ args = parser.parse_args()
 # comprobamos argumento 'version'
 if args.version:
     # "%(prog)s
-    print("webmonitor.py version: ", VERSION,
-          "\n\tmodificado el: ", MODIFICADO)
+    print("webmonitor.py version: ", VERSION,"\n\tmodificado el: ", MODIFICADO)
     exit()
 
 
@@ -149,7 +148,7 @@ def comprobar_ficheros(f1, f2):
         else:
             # existe f1 pero no f2, renombramos f1, bajamos nuevo y comprobamos
             print('ERROR: no existe ', f2, '\n\tRenombramos: ',
-                  f1, ' a ', F2, ' y recomprobamos...')
+            f1, ' a ', F2, ' y recomprobamos...')
             os.rename(f1, F2)
             bajar_fichero()
             comprobar_ficheros(F1, F2)
@@ -309,48 +308,32 @@ def req(url):
 
 
 def raspbian():
-    url="https://www.raspberrypi.org/downloads/raspbian/"
-    soup=req(url)
+    url = "https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit"
+    soup = req(url)
 
-    imagenes=soup.find("div", class_ = "image-info")
-    with open("raspbian.txt", "w") as f:
+    imagenes = soup.find_all("div", class_ = "c-software-os")[:-1] # omitimos Pi Desktop para PC
+    # print('\n imagenes: \n\n', imagenes)
+    with open("raspbian.html", "w") as f:
         print(imagenes, file = f)
 
-    f=open("raspbian.txt", "r")
-    contenido=f.read()
+    f = open("raspbian.html", "r")
+    soup = bs(f.read(), 'html.parser')
 
-    # detalles = soup.find_all("div", class_="image-details")
-    # descarga = soup.find("a", class_="btn dl-zip", href=True)
-    soup=bs(contenido, 'html.parser')
-    # print('h3:', soup.div.h3.string)
-    # print('content:', soup.div.h3.contents[0])
-    titulo=soup.div.h3.string
-    # titulo.replace("with desktop an recommended software") #NO FUNCIONA BIEN
-    nombre=titulo[:-37] + "(desktop + software)"
-    # dato = soup.div.div.string
-    version=soup.div.find_next('div').find_next('div').strong.string
+    heading = soup.find_all(class_ = "c-software-os__heading")
+    list = soup.find_all(class_ = "c-software-os__list")
+    sha256 = soup.find_all(class_ = "c-software-os__sha256-value")
+    links = soup.find_all(class_ = "c-software-os__download-links")
+    links_direct = soup.find_all(class_ = "sc-rp-button")
+    links_torrent = soup.find_all(class_ = "sc-rp-link c-software-os__torrent-link")
 
-    dia=version.find_next('div').strong.string
-    fecha=datetime.datetime.strptime(dia, "%Y-%m-%d")
-#    print('dia: ',dia,'\nfecha: [{:%d %b. %Y}]'.format(fecha))
+    texto = ''
+    # links_direct omitido
+    for h, i, sha, lt in zip(heading, list, sha256, links_torrent):
+        items = i.text.replace("Release date: ", "(").replace("Kernel version: ", ", ").replace("Size: ", " kernel, ").replace("MB", " MB") + ")"
+        texto += '\t\n{0} {1}\n {2}\n {3}\n '.format(h.text, items, sha.text, lt['href'])
 
-    kernel=dia.find_next('div').strong.string
-    tam=kernel.find_next('div').strong.string
-    enlace=tam.find_next('a').find_next('a').find_next('a')['href']
-
-    texto='Raspbian:\n\t'+nombre + \
-        '\n\t[{:%d %b. %Y}]'.format(fecha)+'    ' + \
-        tam+'    '+kernel+' kernel\n\t'+enlace
     # print(texto)
-
-#    print('nombre: ',nombre,'\nfecha: [{:%d %b. %Y}]'.format(fecha),
-#    '\nkernel: ',kernel,'\ntamaño: ',tam,'\nenlace: ',enlace)
-
-#    for child in soup.div.children:
-#        print(child.string)
-
     return texto
-
 
 def restar(data):
     # using list comprehension + list slicing
@@ -448,7 +431,7 @@ def bajar_fichero():
         print("\tLibreOffice Still (Estable):  ", viejo, file = f)
 
         print(" ", file = f)
-        print("[X]", raspbian(), file = f)
+        print("[X] Raspbian:\n", raspbian(), file = f)
 
         retropie=github("RetroPie/RetroPie-Setup")
         retro=retropie.replace(" RetroPie-Setup Script ", " ").rstrip()
@@ -482,12 +465,6 @@ def bajar_fichero():
 
         f.close()
 
-
 if __name__ == "__main__":
 
-    # bajar_fichero()
-    #telegram(F1)
-
-    # print(github("microsoft/vscode"))
-    comprobar_cambios(F1, F2)
-    # telegram(F1)
+    comprobar_ficheros(F1, F2)

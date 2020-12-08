@@ -1,42 +1,84 @@
 [X] Android-x86: cm-x86-14.1-r4 released (fourth stable release of cm-14.1-x86) [20 May. 2020]
  
-[X] ASUS RT-AC68U: 3.0.0.4.385.20633
-	[14 Aug. 2020]    36.78 MBytes
+[X] ASUS RT-AC68U: 3.0.0.4.386.40558
+	[05 Nov. 2020]    40.62 MBytes
 
-	  	\- Fixed RCE vulnerability.  
+	  	New Feature  
+  
+  	1\. AiMesh 2.0  
+  	\- System optimization: one click in AiMesh to optimize the topology  
+  	\- System Ethernet backhaul mode, all nodes will only connect by ethernet, all
+  	bands will be released for wireless clients.  
+  	\- System factory default and reboot.  
+  	\- Client device reconnect, make the device to offline and online again.  
+  	\- Client device binding to specific AP.  
+  	\- Guest WiFi on all Mesh nodes (all node need to upgrade to 3.0.0.4.386
+  	firmware)  
+  	\- Access nodes USB application.  
+  
+  	Connection priority and Ethernet backhaul mode introduction  
+  	https://www.asus.com/support/FAQ/1044184  
+  
+  	How to setup ASUS AiMesh or ZenWiFi Mesh Ethernet backhaul under different
+  	conditions  
+  	https://www.asus.com/support/FAQ/1044151/  
+  
+  	2\. New Family interface in ASUS router App.  
+  	ASUS Router App for iOS must greater or equal to iOS v1.0.0.5.75  
+  	Android version greater or equal to v1.0.0.5.74  
+  
+  	3\. The unit of the WiFi time scheduler goes to 1 minute.  
+  
+  	4\. 2.4 and 5G on the network map could be configured in the same tab.  
+  
+  	5\. Captcha for login can be disabled in administration -> system.  
+  
+  	6\. Printer server port can be disabled on the USB app page.  
+  
+  	7\. Clients which connect to the guest network can be viewed in the network
+  	map -->view list --> interface  
   
   	Please unzip the firmware file first then check the MD5 code.  
-  	MD5: 801853d717df8323ca56a4c6ccff968a
+  	MD5: 6d9ea61699a985645d83edf0b415476a
 
-	https://dlcdnets.asus.com/pub/ASUS/wireless/RT-AC68U/FW_RT_AC68U_300438520633.zip
+	https://dlcdnets.asus.com/pub/ASUS/wireless/RT-AC68U/FW_RT_AC68U_300438640558.zip
  
-[X] Calibre: 5.0.1 [25 Sep. 2020]
+[X] Calibre: 5.6 [27 Nov. 2020]
 
-[X] GIMP: 2.10.20  
+[X] Development release GIMP: 2.99.2 is out
 
 [X] Inkscape 1.0.1
 
 [X] LibreOffice:
-	LibreOffice Fresh (Reciente):  7.0.1
-	LibreOffice Still (Estable):   6.4.6
+	LibreOffice Fresh (Reciente):  7.0.3
+	LibreOffice Still (Estable):   6.4.7
  
 [X] Raspbian:
-	Raspberry Pi OS (32-bit) (desktop + software)
-	[20 Aug. 2020]     2531 MB    5.4 kernel
-	https://downloads.raspberrypi.org/raspios_full_armhf_latest
+ 	
+Raspberry Pi OS with desktop and recommended software (December 2nd 2020, 5.4 kernel, 2,949 MB)
+ cacfd32ae4bc08708a65982abab70c7c99975ae5a9c309b11c4fcf88bf03ac86
+ https://downloads.raspberrypi.org/raspios_full_armhf/images/raspios_full_armhf-2020-12-04/2020-12-02-raspios-buster-armhf-full.zip.torrent
+ 	
+Raspberry Pi OS with desktop (December 2nd 2020, 5.4 kernel, 1,177 MB)
+ 32034189474585c521748a6a4b21388fde9ae2c6b0c5c2d32f8abfbf508ee865
+ https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2020-12-04/2020-12-02-raspios-buster-armhf.zip.torrent
+ 	
+Raspberry Pi OS Lite (December 2nd 2020, 5.4 kernel, 438 MB)
+ 186525f542056e953cb309c74a6398d8fef9bc808c6e83d82f358692a41e3964
+ https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2020-12-04/2020-12-02-raspios-buster-armhf-lite.zip.torrent
+ 
 
 
-[X] RetroPie/RetroPie-Setup [28 Apr. 2020]: version 4.6 
+[X] RetroPie/RetroPie-Setup [04 Nov. 2020]: version 4.7.1 
  https://github.com/RetroPie/RetroPie-Setup/releases/latest 
  	
-  	-Changes since 4.5
 
-  	-Raspberry Pi 4 support! Support is labelled as beta currently as there are still things to improve, but most emulators now run well.
-  	-The RetroPie images are now based on Raspbian Buster - Stretch is no longer supported by Raspberr...
+  	-Fixed performance issue with EmulationStation on Raspberry PI 0/1/2/3 with legacy drivers (Switch back to GLESv1 for now until issues with ES GLESv2 renderer are sorted)
+  	-Fixed ES scraper.
 
-	 * retropie-buster-4.6-rpi2_rpi3.img.gz (803 MB): github.com/RetroPie/RetroPie-Setup/releases/download/4.6/retropie-buster-4.6-rpi2_rpi3.img.gz
+  	-...
 
-	 * retropie-buster-4.6-rpi4.img.gz (807 MB): github.com/RetroPie/RetroPie-Setup/releases/download/4.6/retropie-buster-4.6-rpi4.img.gz
+	 * retropie-buster-4.7.1-rpi4_400.img.gz (845 MB): github.com/RetroPie/RetroPie-Setup/releases/download/4.7.1/retropie-buster-4.7.1-rpi4_400.img.gz
 
 
 [X] sumatrapdfreader/sumatrapdf [17 Mar. 2020]: 3.2 release 
@@ -68,51 +110,41 @@
   	-Add user auto-registration when using HTTP Basic authentication login method #3...
 
 
-[X] pi-hole/pi-hole [09 Aug. 2020]: Pi-hole Core v5.1.2 
+[X] pi-hole/pi-hole [02 Dec. 2020]: Pi-hole Core v5.2.1 
  https://github.com/pi-hole/pi-hole/releases/latest 
  	
 
-  	-Allow port number on IPV6 validator 643d2c0 (@PromoFaux)
-  	-Fix for gravity cronjob #3599 (@DL6ER)
-  	-Wrap OS Check function in gate and add ns1 resolver for dig #3596 (@PromoFaux)
-  	-Add OS and version to output if unsupported OS is detected #3597 (@yubius...
+  	-Don't delete entries including and greater than PIHOLE_DNS_10 on update/repair #3874 (@PromoFaux)
+  	-Fix "Never forward non-FQDNs" checkbox #3887 (@DL6ER)
+  	-Fix processing of CONDITIONAL_FORWARDING_REVERSE #3882 (@PromoFaux )
+  	-Fix debugger stripping cont...
+ 
  
 
 
-[X] buggins/coolreader [11 Sep. 2020]: cr3.2.49 
- https://github.com/buggins/coolreader/releases/latest 
- 	
-  	-Fixes for 3.2.47
-  	-ODS support
-  	-...
-
-	 * cr3.2.49-armeabi-v7a-release.apk (8.98 MB): github.com/buggins/coolreader/releases/download/cr3.2.49/cr3.2.49-armeabi-v7a-release.apk
-
-	 * cr3.2.49-universal-release.apk (23.6 MB): github.com/buggins/coolreader/releases/download/cr3.2.49/cr3.2.49-universal-release.apk
-
-
-[X] apprenticeharper/DeDRM_tools [18 Jun. 2020]: v6.8.0 
+[X] apprenticeharper/DeDRM_tools [28 Nov. 2020]: v6.8.1 
  https://github.com/apprenticeharper/DeDRM_tools/releases/latest 
  	
-  	-This release adds full support for the new .kinf2018 key files and the nw KFX encryption. Many thanks to Apprentice Sakuya for their work on this.
-  	-This means that this release now works with the latest (2.8) version of Kindle for PC and Kindle for M...
+  	-This release is for calibre 4.x and earlier.
+  	-This releases fixes a problem with retrieving the Kindle for Mac key under Mac OS X Big Sur. The Obok plugin hasn't been changed.
+  	-If you are already using 6.8.0 you only need this update if you use Kindle...
 
 
-[X] koreader/koreader [17 Sep. 2020]: KOReader 2020.09 "Peanut Butter" 
+[X] koreader/koreader [16 Nov. 2020]: KOReader 2020.11 "Hive of Industry" 
  https://github.com/koreader/koreader/releases/latest 
  	
-  	-This month's release addresses a few long-standing PocketBook platform issues to bring the experience more in line with other platforms. A big thanks to @ezdiy for the effort.
-  	-On Kobo it's now possible to enable USB Mass Storage without (re)starting...
 
-	 * koreader-2020.09-amd64.deb (25.3 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-2020.09-amd64.deb
+  	-In November we've mostly seen the usual batch of refinements and bug fixes. The Android app will now avoid a zombie state when it's killed by the activity manager (#6811). Besides that, we have a few new plugins: QR code display (#6844) and CoverIm...
 
-	 * koreader-2020.09-armhf.deb (23.6 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-2020.09-armhf.deb
+	 * koreader-2020.11-amd64.deb (25.6 MB): github.com/koreader/koreader/releases/download/v2020.11/koreader-2020.11-amd64.deb
 
-	 * koreader-android-arm-v2020.09.apk (35.3 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-android-arm-v2020.09.apk
+	 * koreader-2020.11-armhf.deb (23.9 MB): github.com/koreader/koreader/releases/download/v2020.11/koreader-2020.11-armhf.deb
 
-	 * koreader-android-x86-v2020.09.apk (37.7 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-android-x86-v2020.09.apk
+	 * koreader-android-arm-v2020.11.apk (35.3 MB): github.com/koreader/koreader/releases/download/v2020.11/koreader-android-arm-v2020.11.apk
 
-	 * koreader-kobo-v2020.09.zip (37.8 MB): github.com/koreader/koreader/releases/download/v2020.09/koreader-kobo-v2020.09.zip
+	 * koreader-android-x86-v2020.11.apk (37.6 MB): github.com/koreader/koreader/releases/download/v2020.11/koreader-android-x86-v2020.11.apk
+
+	 * koreader-kobo-v2020.11.zip (38.3 MB): github.com/koreader/koreader/releases/download/v2020.11/koreader-kobo-v2020.11.zip
 
 
 [X] seblucas/cops [24 Jun. 2019]: 1.1.3 - 20190624 
@@ -137,56 +169,48 @@
  
 
 
-[X] microsoft/terminal [22 Sep. 2020]: Windows Terminal v1.3.2651.0 
+[X] microsoft/terminal [20 Nov. 2020]: Windows Terminal v1.4.3243.0 
  https://github.com/microsoft/terminal/releases/latest 
  	
-  	-This release brings all of the preview changes in Windows Terminal 1.3 to the stable channel. Notable changes include:
-
-  	-A new tab switching experience, on by default. Opt out with "useTabSwitcher": false.
-  	-The command palette is now bound to Ctrl+Shi...
+  	-This is a quick servicing release to address a couple glaring issues in the 1.4 stable release.
+  	-A preinstallation kit is available for system integrators and OEMs interested in prepackaging Windows Terminal with a Windows image. More information is ...
 
 
-[X] microsoft/PowerToys [02 Sep. 2020]: Release v0.21.1 
+[X] microsoft/PowerToys [01 Dec. 2020]: Release v0.27.0 
  https://github.com/microsoft/PowerToys/releases/latest 
  	
-  	-Our goals for 0.21 release cycle was to focus on stability, localization and quality of life improvements for both the development team and our end users.
+  	-Our goals for 0.27 release cycle was to focus on end-user experience, stability, accessibility, localization and quality of life improvements for both the development team and our end users
   	-Where is the Video Conference utility?
-  	-Please use the pre-release 0.22 installer if you want t...
+  	-This is included in ...
 
-	 * PowerToysSetup-0.21.1-x64.exe (20.6 MB): github.com/microsoft/PowerToys/releases/download/v0.21.1/PowerToysSetup-0.21.1-x64.exe
+	 * PowerToysSetup-0.27.0-x64.exe (18.6 MB): github.com/microsoft/PowerToys/releases/download/v0.27.0/PowerToysSetup-0.27.0-x64.exe
  
 
 
-[X] atom/atom [09 Sep. 2020]: 1.51.0 
+[X] atom/atom [10 Nov. 2020]: 1.53.0 
  https://github.com/atom/atom/releases/latest 
  	
   	-Notable Changes
 
-  	-#20899 - Faster listing of available packages
+  	-#21367 - Fix version information
+  	-#21425 - Update Debian dependencies, fixes installing Atom on Ubuntu Groovy
+  	-#21446 - Clarify the context under which log-file is used
+  	-atom/github#2425 - Hide git and GitHub tab avatar alt text when o...
+
+	 * atom-amd64.deb (118 MB): github.com/atom/atom/releases/download/v1.53.0/atom-amd64.deb
+
+	 * atom-amd64.tar.gz (182 MB): github.com/atom/atom/releases/download/v1.53.0/atom-amd64.tar.gz
+
+	 * atom-windows.zip (178 MB): github.com/atom/atom/releases/download/v1.53.0/atom-windows.zip
+
+	 * atom-x64-windows.zip (183 MB): github.com/atom/atom/releases/download/v1.53.0/atom-x64-windows.zip
+
+	 * AtomSetup-x64.exe (180 MB): github.com/atom/atom/releases/download/v1.53.0/AtomSetup-x64.exe
+
+	 * AtomSetup.exe (175 MB): github.com/atom/atom/releases/download/v1.53.0/AtomSetup.exe
 
 
-  	-All Changes
-  	-Atom Core
-  	-v1.50.0...1.51.0
-
-  	-atom/atom#21039 - ⬆️ prebuild-install@5.3.5
-  	-atom/atom#21061 - no PR triggers on release builds
-  	-atom/atom#20856 - Miscellaneous python3-related u...
-
-	 * atom-amd64.deb (120 MB): github.com/atom/atom/releases/download/v1.51.0/atom-amd64.deb
-
-	 * atom-amd64.tar.gz (176 MB): github.com/atom/atom/releases/download/v1.51.0/atom-amd64.tar.gz
-
-	 * atom-windows.zip (170 MB): github.com/atom/atom/releases/download/v1.51.0/atom-windows.zip
-
-	 * atom-x64-windows.zip (175 MB): github.com/atom/atom/releases/download/v1.51.0/atom-x64-windows.zip
-
-	 * AtomSetup-x64.exe (172 MB): github.com/atom/atom/releases/download/v1.51.0/AtomSetup-x64.exe
-
-	 * AtomSetup.exe (167 MB): github.com/atom/atom/releases/download/v1.51.0/AtomSetup.exe
-
-
-[X] microsoft/vscode [24 Sep. 2020]: August 2020 Recovery 2 
+[X] microsoft/vscode [11 Nov. 2020]: October 2020 Recovery 
  https://github.com/microsoft/vscode/releases/latest 
  	
   	-The update addresses these issues.
@@ -204,32 +228,43 @@
  
 
 
-[X] ytdl-org/youtube-dl [20 Sep. 2020]: youtube-dl 2020.09.20 
+[X] ytdl-org/youtube-dl [06 Dec. 2020]: youtube-dl 2020.12.07 
  https://github.com/ytdl-org/youtube-dl/releases/latest 
  	
   	-Core
 
-  	-[extractor/common] Relax interaction count extraction in _json_ld
+  	-[extractor/common] Extract timestamp from Last-Modified header
 
 
-  	-[extractor/common] Extract author as uploader for VideoObject in _json_ld
+  	-[extractor/common] Add support for dl8-* media tags (#27283)
 
 
-  	-[downloader/hls] Fix incorrect end byte in Range HTTP header for
-  	-media segments with EXT-X-BYTERANG...
+  	-[extractor/common] Fix media type extraction for HTML5 media tags
+  	-in start/end form
 
-	 * youtube-dl.exe (7.69 MB): github.com/ytdl-org/youtube-dl/releases/download/2020.09.20/youtube-dl.exe
+  	-Extractors
 
-	 * youtube-dl.exe.sig (566 Bytes): github.com/ytdl-org/youtube-dl/releases/download/2020.09.20/youtube-dl.exe.sig
+  	-[aenetworks] Fix e...
+
+	 * youtube-dl.exe (7.73 MB): github.com/ytdl-org/youtube-dl/releases/download/2020.12.07/youtube-dl.exe
+
+	 * youtube-dl.exe.sig (566 Bytes): github.com/ytdl-org/youtube-dl/releases/download/2020.12.07/youtube-dl.exe.sig
 
 
-[X] TeamNewPipe/NewPipe [28 Jul. 2020]: v0.19.8 
+[X] TeamNewPipe/NewPipe [01 Dec. 2020]: v0.20.5 
  https://github.com/TeamNewPipe/NewPipe/releases/latest 
  	
-  	-➡️  Blog post for this release
+  	-Improved
+
+  	-[PeerTube] update instances list #4969
+
   	-Fixed
 
-  	-Fix extraction of YouTube's decryption function.
+  	-Fixed enless loop of crashes when accessing NewPipe's ErrorActivity #4995
+
+  	-Other
+
+  	-Updated contribution guidelines #4318
 
   	-...
 
