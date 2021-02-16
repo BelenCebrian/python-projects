@@ -1,7 +1,16 @@
 import shutil, os, sys, shlex, subprocess
 from datetime import datetime, timedelta
+import config #TOKENs
 
+
+# variables globales
+TOKEN1 = config.TOKEN1  # appActualizada
+TOKEN2 = config.TOKEN2  # prueba-bot
+ID = config.CHAT1
+VERSION = config.VERSION
+MODIFICADO = config.MODIFICADO
 DIRECTORY = 'Historico'
+
 
 # change directory path to generate thing in the correct folder
 # https://unix.stackexchange.com/questions/334800/python-script-output-in-the-wrong-directory-when-called-from-cron
@@ -32,9 +41,6 @@ def move(thing):
         message = 'ERROR al mover: '+thing
         #print(message)
 
-        TOKEN1 = '1079377213:AAGWKiIBiAUg-Jm3litUkl9fGyjjik2YY1A' #actualizaciones
-        TOKEN2 = '571258324:AAEJ_vzFgEM-9XDPkm7WakXntBlmU3Y7X6M'  #prueba-bot
-        ID = "9093721"
         URm = "https://api.telegram.org/bot{}/sendMessage"
         URd = "https://api.telegram.org/bot{}/sendDocument"
         URp = "https://api.telegram.org/bot{}/sendPhoto"
