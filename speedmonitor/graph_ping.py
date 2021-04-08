@@ -62,7 +62,7 @@ def make_graph():
         ax2 = ax1.twinx()
         color = 'tab:green'
         ax2.plot(times, ping, label='ping', color='#ADB7BD')
-        ax2.set_ylabel('Ping')
+        ax2.set_ylabel('Ping (ms)')
 
         ax1.tick_params(axis='x', rotation=90)
         #fig.autofmt_xdate()   #rota HORAS y SALE eje X
