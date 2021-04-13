@@ -1,0 +1,5 @@
+lxml==4.6.2
+requests==2.21.0
+beautifulsoup4==4.9.3
+html2text==2020.1.16
+python_dateutil==2.8.1
